@@ -1,6 +1,7 @@
 # About Dataset 
 
 Link to dataset: https://www.kaggle.com/datasets/blastchar/telco-customer-churn 
+
 Each row represents a customer, each column contains customer’s attributes described on the column Metadata. 
 
 ## The dataset includes information about: 
