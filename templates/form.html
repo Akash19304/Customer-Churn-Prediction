@@ -1,0 +1,161 @@
+<html>
+<body>
+  <div>
+    <h1>Enter following details about the customer: </h1>
+  </div>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    
+      
+<div><h3>Customer Demographic: </h3></div>
+  
+<div class="form-group m-3">
+  <label for="Gender">Gender:</label>
+  <select id="Gender" name="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+  
+<div class="form-group">
+  <label for="SeniorCitizen">SeniorCitizen:</label>
+  <select id="SeniorCitizen" name="SeniorCitizen">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="Partner">Partner:</label>
+  <select id="Partner" name="Partner">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="Dependents">Dependents:</label>
+  <select id="Dependents" name="Dependents">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+  </select>
+</div>
+
+<div><h3>Services that each customer has signed up for: </h3></div>
+<div class="form-group">
+  <label for="PhoneService">PhoneService:</label>
+  <select id="PhoneService" name="PhoneService">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+  </select>
+</div>
+<div class="form-group">
+  <label for="MultipleLines">MultipleLines:</label>
+  <select id="MultipleLines" name="MultipleLines">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+</div>
+<div class="form-group">
+  <label for="InternetService">InternetService:</label>
+  <select id="InternetService" name="InternetService">
+    <option value="DSL">DSL</option>
+    <option value="Fiber optic">Fiber optic</option>
+    <option value="No">No</option>
+    
+  </select>
+</div>
+<div class="form-group">
+  <label for="OnlineSecurity">OnlineSecurity:</label>
+  <select id="OnlineSecurity" name="OnlineSecurity">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="OnlineBackup">OnlineBackup:</label>
+  <select id="OnlineBackup" name="OnlineBackup">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="DeviceProtection">DeviceProtection:</label>
+  <select id="DeviceProtection" name="DeviceProtection">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    
+  </select>
+</div>
+<div class="form-group">
+  <label for="TechSupport">TechSupport:</label>
+  <select id="TechSupport" name="TechSupport">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+</div>
+<div class="form-group">
+  <label for="StreamingTV">StreamingTV:</label>
+  <select id="StreamingTV" name="StreamingTV">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="StreamingMovies">StreamingMovies:</label>
+  <select id="StreamingMovies" name="StreamingMovies">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+</div>
+
+<div><h3>Customer account information: </h3></div>
+
+<div class="form-group">
+  <label for="Tenure">Tenure:</label>
+  <input type="text" id="Tenure" name="Tenure" placeholder="Enter the Tenure: ">
+</div>
+
+<div class="form-group">  
+  <label for="MonthlyCharges">Monthly-Charges:</label>
+  <input type="text" id="MonthlyCharges" name="MonthlyCharges" placeholder="Enter Monthly-Charges: ">
+</div>
+
+<div class="form-group">
+  <label for="Contract">Contract:</label>
+  <select id="Contract" name="Contract">
+    <option value="Month-to-month">Month-to-month</option>
+    <option value="One year">One year</option>
+    <option value="Two year">Two year</option>
+
+  </select>
+</div>
+<div class="form-group">
+  <label for="PaperlessBilling">PaperlessBilling:</label>
+  <select id="PaperlessBilling" name="PaperlessBilling">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+</div>
+<div class="form-group">
+  <label for="PaymentMethod">PaymentMethod:</label>
+  <select id="PaymentMethod" name="PaymentMethod">
+    <option value="Electronic check">Electronic check</option>
+    <option value="Mailed check">Mailed check</option>
+    <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+    <option value="Credit card (automatic)">Credit card (automatic)</option>
+  </select>
+</div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Did the customer leave -> {{results}}</h2>
+</body>
+</html>
